@@ -1,0 +1,19 @@
+.select {
+    width: 180px;
+}
+
+.select select {
+    display: block;
+    width: 100%;
+    padding: 4px 54px 5px 9px;
+    border: 1px solid #4296FF;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    background: url(Vector.png) no-repeat;
+    background-position: 158px;
+}
