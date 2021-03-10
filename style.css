@@ -10,7 +10,7 @@
     padding-left: 9px;
     padding-top: 7px;
     box-sizing: border-box;
-    background: url(Vector.png) no-repeat;
+    background: url(down.png) no-repeat;
     background-position: 158px;
 }
 
@@ -23,6 +23,8 @@
     border-bottom-right-radius: 0;
     border: 1px solid #4296FF;
     border-bottom: 0;
+    background: url(up.png) no-repeat;
+    background-position: 158px;
 }
 
 .select__list {
