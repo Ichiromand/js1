@@ -1,19 +1,53 @@
+.select__head {
+    border: 1px solid #C1C1C1;
+    border-radius: 4px;
+    color: #C1C1C1;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Open Sans';
+    width: 180px;
+    height: 32px;
+    padding-left: 9px;
+    padding-top: 7px;
+    box-sizing: border-box;
+    background: url(Vector.png) no-repeat;
+    background-position: 158px;
+}
+
 .select {
     width: 180px;
 }
 
-.select select {
-    display: block;
-    width: 100%;
-    padding: 4px 54px 5px 9px;
+.select:hover .select__head {
+    display: none;
+}
+
+.select__list {
+    margin: 0;
+    padding: 0;
     border: 1px solid #4296FF;
+    box-sizing: border-box;
     border-radius: 4px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    display: none;
+}
+
+.select:hover .select__list {
+    display: block;
+}
+
+.select__item {
+    list-style-type: none;
+    padding-left: 8px; 
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
     font-size: 13px;
     line-height: 18px;
-    color: #333333;
-    background: url(Vector.png) no-repeat;
-    background-position: 158px;
+    border: ;
+}
+
+.select__item:hover {
+    background: rgba(66, 150, 255, 0.1);
 }
