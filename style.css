@@ -69,3 +69,7 @@
 .select__item:hover {
     background: rgba(66, 150, 255, 0.1);
 }
+
+.black {
+    color: #333333;
+}
