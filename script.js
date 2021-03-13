@@ -3,9 +3,15 @@ let selectHead = document.querySelector('.select__head');
 let selectItem = document.querySelectorAll('.select__item');
 
 selectHead.onclick = function (){
-    selectList.classList.add('select__open-list');
-    selectHead.classList.remove('select__head');
-    selectHead.classList.add('select__head-open');
+    if(selectHead.classList.contains('select__head-open')){
+        selectList.classList.remove('select__open-list');
+        selectHead.classList.add('select__head');
+        selectHead.classList.remove('select__head-open');
+    } else {
+        selectList.classList.add('select__open-list');
+        selectHead.classList.remove('select__head');
+        selectHead.classList.add('select__head-open');
+    }
 
 }
 
