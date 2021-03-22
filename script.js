@@ -6,14 +6,24 @@ let options = [
     { value: 'silver', label: 'SILVER' },
     { value: 'diamond', label: 'DIAMOND' }
     ]
-let selectItems = [];
 
 options.forEach(function(item){
     let selectItem = document.createElement('li');
     selectItem.className = 'select__item';
     selectList.appendChild(selectItem);
     selectItem.textContent = item.label;
-    selectItems.push(selectItem)
+    selectItem.onclick = function(){
+        selectHead.textContent = item.textContent;
+        selectHead.classList.add('black');
+        selectList.classList.remove('select__open-list');
+        selectHead.classList.add('select__head');
+        selectHead.classList.remove('select__head-open');
+        if (item.textContent === 'Не задан') {
+            selectHead.classList.remove('black');
+            selectHead.textContent = 'Выбрать';
+        }
+    }
+
 })
 
 selectHead.onclick = function (){
@@ -27,18 +37,4 @@ selectHead.onclick = function (){
         selectHead.classList.add('select__head-open');
     }
 
-}
-
-for (let item of selectItems) {
-    item.onclick = function(){
-        selectHead.textContent = item.textContent;
-        selectHead.classList.add('black');
-        selectList.classList.remove('select__open-list');
-        selectHead.classList.add('select__head');
-        selectHead.classList.remove('select__head-open');
-        if (item.textContent === 'Не задан') {
-            selectHead.classList.remove('black');
-            selectHead.textContent = 'Выбрать';
-        }
-    }
 }
