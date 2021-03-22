@@ -12,7 +12,7 @@ options.forEach(function(item){
     selectItem.className = 'select__item';
     selectList.appendChild(selectItem);
     selectItem.textContent = item.label;
-    selectItem.onclick = function(){
+    selectItem.onclick = function(event){
         selectHead.textContent = selectItem.textContent;
         selectHead.classList.add('black');
         selectList.classList.remove('select__open-list');
@@ -21,6 +21,11 @@ options.forEach(function(item){
         if (selectItem.textContent === 'Не задан') {
             selectHead.classList.remove('black');
             selectHead.textContent = 'Выбрать';
+        }
+        if(!event.target.closest('.select')){
+            selectList.classList.remove('select__open-list');
+            selectHead.classList.add('select__head');
+            selectHead.classList.remove('select__head-open');
         }
     }
 
