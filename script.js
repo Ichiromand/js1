@@ -13,7 +13,7 @@ options.forEach(function(item){
     selectList.appendChild(selectItem);
     selectItem.textContent = item.label;
     selectItem.onclick = function(){
-        selectHead.textContent = item.textContent;
+        selectHead.textContent = selectItem.textContent;
         selectHead.classList.add('black');
         selectList.classList.remove('select__open-list');
         selectHead.classList.add('select__head');
