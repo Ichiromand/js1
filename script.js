@@ -1,6 +1,20 @@
 let selectList = document.querySelector('.select__list');
 let selectHead = document.querySelector('.select__head');
-let selectItem = document.querySelectorAll('.select__item');
+let options = [
+    { value: '', label: 'Не задан' },
+    { value: 'gold', label: 'GOLD' },
+    { value: 'silver', label: 'SILVER' },
+    { value: 'diamond', label: 'DIAMOND' }
+    ]
+let selectItems = [];
+
+options.forEach(function(item){
+    let selectItem = document.createElement('li');
+    selectItem.className = 'select__item';
+    selectList.appendChild(selectItem);
+    selectItem.textContent = item.label;
+    selectItems.push(selectItem)
+})
 
 selectHead.onclick = function (){
     if(selectHead.classList.contains('select__head-open')){
@@ -15,7 +29,7 @@ selectHead.onclick = function (){
 
 }
 
-for (let item of selectItem) {
+for (let item of selectItems) {
     item.onclick = function(){
         selectHead.textContent = item.textContent;
         selectHead.classList.add('black');
