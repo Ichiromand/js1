@@ -18,7 +18,7 @@ options.forEach(function(item){
         selectList.classList.remove('select__open-list');
         selectHead.classList.add('select__head');
         selectHead.classList.remove('select__head-open');
-        if (item.textContent === 'Не задан') {
+        if (selectItem.textContent === 'Не задан') {
             selectHead.classList.remove('black');
             selectHead.textContent = 'Выбрать';
         }
