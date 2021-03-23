@@ -1,8 +1,7 @@
-function initSelect(chooseClass, arr){
+function initSelect(chooseClass, options){
     let select = document.querySelector(chooseClass)
     let selectList = select.querySelector('.select__list');
     let selectHead = select.querySelector('.select__head');
-    let options = arr
     
     options.forEach(function(item){
         let selectItem = document.createElement('li');
@@ -35,13 +34,13 @@ function initSelect(chooseClass, arr){
         }
     }
 
-    document.onclick = function(event){
+    document.addEventListener('click', function (event){
         if(!event.target.closest(chooseClass)){
             selectList.classList.remove('select__open-list');
             selectHead.classList.add('select__head');
             selectHead.classList.remove('select__head-open');
         }
-    }
+    }) 
 }
 
 
