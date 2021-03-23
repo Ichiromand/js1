@@ -14,9 +14,10 @@
     background-position: 158px;
 }
 
-.select {
+.select-first, .select-second {
     width: 180px;
     position: relative;
+    margin-bottom: 200px;
 }
 
 .select__head-open {
