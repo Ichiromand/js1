@@ -17,7 +17,6 @@
 .select-first, .select-second {
     width: 180px;
     position: relative;
-    margin-bottom: 200px;
 }
 
 .select__head-open {
@@ -49,6 +48,7 @@
     display: none;
     width: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 .select__open-list {
