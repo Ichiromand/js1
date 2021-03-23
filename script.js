@@ -16,9 +16,8 @@ function initSelect(chooseClass, options, callback){
             callback(value)
             selectHead.textContent = selectItem.textContent;
             selectHead.classList.add('black');
-            selectList.classList.remove('select__open-list');
-            selectHead.classList.add('select__head');
-            selectHead.classList.remove('select__head-open');
+            selectList.classList.remove('select__list--open');
+            selectHead.classList.remove('select__head--open');
             if (selectItem.textContent === 'Не задан') {
                 selectHead.classList.remove('black');
                 selectHead.textContent = 'Выбрать';
@@ -28,22 +27,19 @@ function initSelect(chooseClass, options, callback){
     })
     
     selectHead.onclick = function (){
-        if(selectHead.classList.contains('select__head-open')){
-            selectList.classList.remove('select__open-list');
-            selectHead.classList.add('select__head');
-            selectHead.classList.remove('select__head-open');
+        if(selectHead.classList.contains('select__head--open')){
+            selectList.classList.remove('select__list--open');
+            selectHead.classList.remove('select__head--open');
         } else {
-            selectList.classList.add('select__open-list');
-            selectHead.classList.remove('select__head');
-            selectHead.classList.add('select__head-open');
+            selectList.classList.add('select__list--open');
+            selectHead.classList.add('select__head--open');
         }
     }
 
     document.addEventListener('click', function (event){
         if(!event.target.closest(chooseClass)){
-            selectList.classList.remove('select__open-list');
-            selectHead.classList.add('select__head');
-            selectHead.classList.remove('select__head-open');
+            selectList.classList.remove('select__list--open');
+            selectHead.classList.remove('select__head--open');
         }
     }) 
 }
